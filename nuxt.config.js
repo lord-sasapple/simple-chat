@@ -1,4 +1,7 @@
 export default {
+  env: {
+    BASE_URL: process.env.BASE_URL || '',
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'simple-chat',

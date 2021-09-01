@@ -29,7 +29,7 @@ export default Vue.extend({
     }
   },
   mounted(): void {
-    this.socket = io('http://localhost:3001')
+    this.socket = io(`${process.env.BASE_URL}:3001`)
     this.socket.emit('join', 'hoge')
     this.socket.on('new-msg', (msg: string) => {
       this.msgs.push(msg)
